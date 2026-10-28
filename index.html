@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-[#FFF9F2] text-gray-900 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-orange-200">
+  <nav class="sticky top-0 z-50 bg-[#FFF9F2]/90 backdrop-blur-md border-b border-orange-100/60 px-6 lg:px-16 py-4 flex items-center justify-between transition-all">
+    <div class="flex items-center space-x-2">
+      <span class="text-xl font-bold tracking-tight text-slate-900">✦ Project</span>
+    </div>
+    <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-500">
+      <a href="#product" class="hover:text-gray-900 transition-colors">Product</a>
+      <a href="#solutions" class="hover:text-gray-900 transition-colors">Solutions</a>
+      <a href="#resources" class="hover:text-gray-900 transition-colors">Resources</a>
+      <a href="#pricing" class="hover:text-gray-900 transition-colors">Pricing</a>
+      <a href="#login" class="text-slate-900 font-semibold hover:text-black transition-colors">Log in</a>
+    </div>
+
+    <div>
+      <a href="#get-started" class="bg-[#111827] text-white text-sm font-medium px-4 py-2.5 rounded-md hover:bg-slate-800 transition-all shadow-sm">
+        Get AI free
+      </a>
+    </div>
+  </nav>
+  <main class="relative px-4 sm:px-6 lg:px-8 pt-12 pb-24 max-w-7xl mx-auto w-full text-center flex-grow flex flex-col justify-center">
+    <div class="max-w-3xl mx-auto space-y-4">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+        Write, plan, share. <br />
+        <span class="text-slate-900">With AI at your side.</span>
+      </h1>
+      <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto font-normal">
+        It is the connected workspace where better, faster work happens. Now with AI.
+      </p>
+    </div>
+    <div class="relative mt-8 mb-16 flex items-center justify-center gap-3">
+      <a href="#get-ai-free" class="inline-flex items-center justify-center bg-[#111827] text-white font-medium text-sm px-5 py-3 rounded-md hover:bg-slate-800 transition-all shadow-md hover:shadow-lg">
+        Get AI free <span class="ml-2">→</span>
+      </a>
+      <a href="#request-demo" class="inline-flex items-center justify-center bg-[#2563EB] text-white font-medium text-sm px-5 py-3 rounded-md hover:bg-blue-700 transition-all shadow-md hover:shadow-lg">
+        Request a demo
+      </a>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto w-full min-h-[380px] sm:min-h-[440px] flex items-center justify-center my-4">
+      
+      <div class="relative z-10 w-full max-w-lg sm:max-w-xl rounded-lg overflow-hidden shadow-xl border border-gray-200/80 bg-white group hover:shadow-2xl transition-all duration-300">
+        <img 
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW8sVg4DxZ2ez20JedTr4_kDOV7tjLtRDT81FNor457wQoT3zLPPaIRao&s=10" 
+          alt="Project Workspace Dashboard Preview" 
+          class="w-full h-auto object-cover max-h-[300px] sm:max-h-[360px]" 
+        />
+      </div>
+
+
+      <div class="absolute left-0 sm:left-4 top-1/2 -translate-y-1/2 z-20 bg-white p-4 rounded-xl shadow-xl border border-gray-100/80 flex items-center space-x-3 text-left max-w-[210px] transform hover:-translate-y-1 transition-transform">
+        <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-red-500 text-lg flex-shrink-0">
+          📋
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-gray-900">Tasks</h4>
+          <p class="text-[11px] text-gray-500 mt-0.5">12 tasks completed today</p>
+        </div>
+      </div>
+
+      <div class="absolute right-2 sm:right-6 top-4 sm:top-8 z-20 bg-white px-4 py-3 rounded-xl shadow-xl border border-gray-100/80 flex items-center space-x-3 text-left max-w-[190px] transform hover:-translate-y-1 transition-transform">
+        <div class="w-7 h-7 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 text-xs font-bold flex-shrink-0">
+          ✓
+        </div>
+        <div>
+          <h4 class="text-[11px] font-semibold text-gray-500 uppercase tracking-wider">Project Status</h4>
+          <p class="text-xs font-bold text-emerald-600 mt-0.5">On Track</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <div id="chat-popup" class="hidden mb-4 w-72 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden transform transition-all">
+      <div class="bg-slate-900 text-white p-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+          <span class="font-semibold text-sm">AI Workspace Assistant</span>
+        </div>
+        <button id="close-chat" class="text-gray-400 hover:text-white text-lg font-bold">&times;</button>
+      </div>
+      <div class="p-4 space-y-3 text-xs text-gray-600 bg-slate-50">
+        <div class="bg-white p-3 rounded-lg border border-gray-200 shadow-sm">
+          👋 Hi! How can I help you set up your team workspace today?
+        </div>
+      </div>
+      <div class="p-3 bg-white border-t border-gray-100 flex gap-2">
+        <input type="text" placeholder="Type a message..." class="w-full text-xs px-3 py-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-slate-900" />
+        <button class="bg-slate-900 text-white px-3 py-1.5 text-xs rounded-md font-medium">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
